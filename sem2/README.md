@@ -45,7 +45,7 @@ dist_sc = directed_hausdorff(features_ref[1], features_seg[1])[0]
 dist_chroma = directed_hausdorff(features_ref[2], features_seg[2])[0]
 ```
 
-Na základě těchto výsledků sestavuji seznam potenciálních slov v databázi a ze seznamu vyberu slovo s největší shodou `best_match = sorted(word_scores, key=lambda item: item[1])[0][0]`. Textové výsledky jsou ve formátu `vybrané slovo - [(slovo - % shoda)]`.
+Na základě těchto výsledků sestavuji seznam potenciálních slov v databázi a ze seznamu vyberu slovo s největší shodou `best_match = sorted(word_scores, key=lambda item: item[1])[0][0]`. Textové výsledky jsou ve formátu od slova s největší shodou po nejnižší, a ukázané jsou 4 nejvíce pravděpodobné výsledky.
 
 ### Výstup pro Signal1.txt
 
