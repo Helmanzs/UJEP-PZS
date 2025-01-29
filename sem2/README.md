@@ -45,7 +45,7 @@ dist_sc = directed_hausdorff(features_ref[1], features_seg[1])[0]
 dist_chroma = directed_hausdorff(features_ref[2], features_seg[2])[0]
 ```
 
-Na základě těchto výsledků sestavuji seznam potenciálních slov v databázi a ze seznamu vyberu slovo s největší shodou `best_match = sorted(word_scores, key=lambda item: item[1])[0][0]`.
+Na základě těchto výsledků sestavuji seznam potenciálních slov v databázi a ze seznamu vyberu slovo s největší shodou `best_match = sorted(word_scores, key=lambda item: item[1])[0][0]`. Textové výsledky jsou ve formátu `vybrané slovo - [(slovo - % shoda)]`.
 
 ### Výstup pro Signal1.txt
 
@@ -55,16 +55,16 @@ Na základě těchto výsledků sestavuji seznam potenciálních slov v databáz
 Odhadnutá věta pro Signal1.txt:
 the make method the time make for prepare the solution
 
-the - [(the - 8.41%) (for - 7.39%) (give - 6.84%) (make - 6.83%)]
-make - [(make - 9.23%) (give - 8.31%) (work - 7.03%) (method - 6.64%)]
-method - [(method - 8.04%) (lecture - 7.82%) (long - 7.36%) (fail - 7.18%)]
-the - [(the - 8.48%) (for - 7.41%) (make - 7.08%) (no - 6.87%)]
-time - [(time - 10.74%) (for - 8.99%) (fail - 8.23%) (probable - 7.46%)]
-make - [(make - 7.74%) (method - 7.72%) (for - 7.69%) (long - 7.43%)]
-for - [(for - 8.31%) (time - 7.43%) (give - 6.86%) (probable - 6.62%)]
-prepare - [(prepare - 10.44%) (idea - 9.70%) (for - 8.72%) (lecture - 7.97%)]
-the - [(the - 8.12%) (no - 7.87%) (make - 7.40%) (give - 7.21%)]
-solution - [(solution - 13.08%) (for - 10.23%) (probable - 9.30%) (succeed - 9.13%)]
+[('the', 1875.1), ('for', 2531.94), ('give', 2888.84), ('make', 2899.82)]
+[('make', 1191.61), ('give', 1792.11), ('work', 2629.78), ('method', 2884.91)]
+[('method', 2332.04), ('lecture', 2440.93), ('long', 2664.14), ('fail', 2750.52)]
+[('the', 1908.39), ('for', 2585.34), ('make', 2796.73), ('no', 2933.21)]
+[('time', 1350.49), ('for', 2221.56), ('fail', 2599.89), ('probable', 2981.92)]
+[('make', 2426.98), ('method', 2438.23), ('for', 2457.57), ('long', 2619.12)]
+[('for', 2412.41), ('time', 2967.9), ('give', 3330.13), ('probable', 3483.2)]
+[('prepare', 2490.24), ('idea', 2712.7), ('for', 3009.15), ('lecture', 3233.25)]
+[('the', 1972.75), ('no', 2141.31), ('make', 2443.81), ('give', 2565.27)]
+[('solution', 3984.78), ('for', 4802.29), ('probable', 5068.32), ('succeed', 5116.79)]
 ```
 
 ### Výstup pro Signal2.txt
@@ -75,11 +75,11 @@ solution - [(solution - 13.08%) (for - 10.23%) (probable - 9.30%) (succeed - 9.1
 Odhadnutá věta pro Signal2.txt:
 the give give for for
 
-the - [(the - 9.74%) (make - 7.32%) (no - 7.13%) (give - 6.78%)]
-give - [(give - 8.26%) (make - 8.13%) (for - 7.79%) (method - 6.98%)]
-give - [(give - 8.73%) (make - 8.65%) (no - 7.46%) (easy - 7.11%)]
-for - [(for - 7.90%) (the - 7.25%) (time - 6.72%) (give - 6.64%)]
-for - [(for - 10.53%) (give - 7.00%) (time - 6.89%) (the - 6.48%)]
+[('the', 1292.28), ('make', 2822.48), ('no', 2944.51), ('give', 3163.48)]
+[('give', 2461.78), ('make', 2526.53), ('for', 2702.41), ('method', 3116.93)]
+[('give', 2493.73), ('make', 2539.34), ('no', 3202.92), ('easy', 3396.55)]
+[('for', 2626.03), ('the', 3025.63), ('time', 3347.29), ('give', 3394.13)]
+[('for', 2896.96), ('give', 4545.17), ('time', 4596.33), ('the', 4786.74)]
 ```
 
 ### Výstup pro Signal3.txt
@@ -90,20 +90,20 @@ for - [(for - 10.53%) (give - 7.00%) (time - 6.89%) (the - 6.48%)]
 Odhadnutá věta pro Signal3.txt:
 the for for lecture lecture
 
-the - [(the - 8.04%) (for - 7.44%) (make - 7.20%) (no - 7.15%)]
-for - [(for - 8.82%) (time - 7.18%) (give - 6.57%) (the - 6.46%)]
-for - [(for - 7.83%) (give - 7.21%) (the - 6.73%) (make - 6.64%)]
-lecture - [(lecture - 8.13%) (is - 7.12%) (the - 6.89%) (make - 6.64%)]
-lecture - [(lecture - 10.03%) (idea - 8.80%) (succeed - 7.57%) (method - 7.27%)]
+[('the', 2424.85), ('for', 2789.68), ('make', 2933.73), ('no', 2964.64)]
+[('for', 2506.28), ('time', 3477.01), ('give', 3841.06), ('the', 3905.52)]
+[('for', 1969.88), ('give', 2393.84), ('the', 2717.08), ('make', 2782.96)]
+[('lecture', 3672.31), ('is', 4228.02), ('the', 4352.5), ('make', 4489.82)]
+[('lecture', 4186.63), ('idea', 4672.23), ('succeed', 5155.02), ('method', 5272.61)]
 ```
 
 ### Závěr
 
-Tento přístup poskytuje efektivní metodu pro analýzu a detekci slov v signálech, přičemž určitě může být dále vylepšen. Já bych ovšem volil například strojové učení pro další zpracování podobných dat.
+Tento přístup poskytuje efektivní metodu pro analýzu a detekci slov v rozdělenou a pomalu mluvenou řečí, ovšem u "normální" řeči má velké problémy ať už slova správně určit, tak i větu správně rozdělit. Algoritmus se dá určitě vylepšit, já bych ovšem ale volil například strojové učení pro další zpracování podobných dat.
 
 ### Použité zdroje
 
-- <https://numpy.org/doc/>
-- <https://librosa.org/doc/latest/index.html>
-- <https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html>
-- <https://pyttsx3.readthedocs.io/en/latest/>
+- [Numpy Dokumentace](https://numpy.org/doc/)
+- [Librosa dokumentace](https://librosa.org/doc/latest/index.html)
+- [Matplotlib dokumentace](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+- [Pyttsx3 dokumentace](https://pyttsx3.readthedocs.io/en/latest/)

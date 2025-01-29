@@ -5,7 +5,7 @@
 
 ## I. seminární práce
 
-- [Textová část seminární práce](sem1/reseni.md)
+- [Textový dokument](sem1/README.md)
 - [Úloha 1](sem1/sem1.ipynb)
 - [Úloha 2](sem1/sem2.ipynb)
 - [Úloha 3](sem1/sem3.ipynb)
@@ -16,7 +16,7 @@ _Pro správnou funkčnost nutno stáhnout soubory
 
 ## II. seminární práce
 
-- [Textový dokument](sem2/reseni.md)
+- [Textový dokument](sem2/README.md)
 - [Úloha 1](sem2/sem.ipynb)
 - [Zadání](sem2/SeminarniPrace-II.pdf)
 

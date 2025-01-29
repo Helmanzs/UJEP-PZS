@@ -84,7 +84,7 @@ Average Metrics: Precision: 0.94, Recall: 0.98, F1-Score: 0.96
 
 Z velké části závisí úspěšnost algoritmu na zvoleném percentilu hranice, kterou jsem po testováni odhadl `94`, která na ukázala nejlepší výsledky. Tuto hodnotu ovšem nelze brát jako tu nejlepší hodnotu pro všechny a všechny druhy signálů.
 
-Algoritmus dosáhl v signálech nejvyšší přesnosti `99%` a nejnižší přesností `91%`, v průměru měl ovšem `96%` přenost (je nutné podotknout že za "přesnost" se považuje F1 skóre, které ukazuje rovnováhu mezi přesností a citlivostí).
+Algoritmus dosáhl v signálech nejvyšší přesnosti `99%` a nejnižší přesností `91%` a v průměru měl `96%` přenost (je nutné podotknout že za "přesnost" se považuje F1 skóre, které ukazuje rovnováhu mezi přesností a citlivostí).
 
 ## Zadání: Výpočet korelace EKG signálů
 
@@ -135,7 +135,7 @@ Corresponding labels: ('drive01', 'drive08')
 
 ### Závěr
 
-Z korelační matice jde dobře vidět že signály `drive13` a `drive14` jsou prakticky stejné a jinak největší korelace je mezi signály `drive05` a `drive17b`, zatímco nejmenší korelace je mezi signály `drive01` a `drive08`.
+Z korelační matice jde dobře vidět že signály `drive13` a `drive14` jsou prakticky stejné a mimoty je největší korelace je mezi signály `drive05` a `drive17b`, zatímco nejmenší korelace je mezi signály `drive01` a `drive08`. Celkově korelace mezi signály je spíše na nižší straně a pro její relevantnost by bylo potřeba signál dále upravit a očistit.
 
 ## Zadání - Výpočet korelace EKG signálů
 
@@ -180,8 +180,8 @@ Myslím si, že provedená analýza poskytuje užitečné informace o dynamice s
 
 ## Použité zdroje
 
-- <https://numpy.org/doc/>
-- <https://docs.scipy.org/doc/scipy/>
-- <https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html>
-- <https://wfdb.readthedocs.io/en/latest/>
-- <https://seaborn.pydata.org/>
+- [Numpy Dokumentace](https://numpy.org/doc/)
+- [WFDB dokumentace](https://wfdb.readthedocs.io/en/latest/)
+- [Scipy dokumentace](https://docs.scipy.org/doc/scipy/)
+- [Matplotlib dokumentace](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+- [Seaborn dokumentace](https://seaborn.pydata.org/)
